@@ -1,0 +1,13 @@
+2.1: 7
+2.2: 10
+
+There are some errors in you indexing magic. E.g. for the provided test file:
+    0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0
+I get this:
+    0.0, 1.0, 3.0, 6.0, 10.0, 15.0, 21.0, 28.0, 36.0, 45.0, 55.0, 66.0, 78.0, 91.0, 171.0
+But the correct output should be:
+    0.0, 1.0, 3.0, 6.0, 10.0, 15.0, 21.0, 28.0, 36.0, 45.0, 55.0, 66.0, 78.0, 91.0, 105.0, 120.0
+
+What is more, Constants.executorAmount is a constant. 
+But you should actually compute the number of parallel threads and the corresponding local array size.
+This also means that your SparseArrayCompaction is wrong but from what I see it's a subsequent error, so I'm giving you full points here :)

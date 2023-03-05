@@ -1,0 +1,12 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build_mandelbrot",
+      "type": "shell",
+      "command": "gcc -mavx -lstdc++ -g -o ./ex04/debug.out ./ex04/mandelbrot.cpp"
+    }
+  ]
+}

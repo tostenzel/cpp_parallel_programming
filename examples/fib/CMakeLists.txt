@@ -1,0 +1,6 @@
+add_executable(fib_seq          fib_seq.cpp)
+add_executable(fib_pointer      fib_pointer.cpp)
+add_executable(fib_promise      fib_promise.cpp)
+add_executable(fib_packaged     fib_packaged.cpp)
+add_executable(fib_make_task    fib_make_task.cpp)
+add_executable(fib_async        fib_async.cpp)
